@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+    /*darks*/
+    --bg-color: hsl(233, 47%, 7%);
+    --card-bg: hsl(244, 38%, 16%);
+    --text-accent: hsl(277, 64%, 61%);
+
+
+    /*lights*/
+    --lrg-txt: hsl(0, 0%, 100%);
+    --prg-txt: hsla(0, 0%, 100%, 0.75);
+    --sts-txt: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-size: 15px;
+}
+
+#hero-ovrly {
+    display: block;
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.overlay-clr {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(277.3, 81.2%, 22.9%);
+    opacity: 61%;
+    border-radius: 10px 10px 0 0;
+}
+
+.mobile-img {
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.desktop-img {
+    display: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg);
+    color: var(--lrg-txt);
+    text-align: center;
+    margin: 45px 5vw;
+    border-radius: 10px;
+}
+
+h1 {
+    margin: 25px 15px 0;
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.accent {
+    color: var(--text-accent);
+}
+
+.paragraph {
+    margin: 10px 48px;
+    font-family: 'Lexand Deco', sans-serif;
+    line-height: 25px;
+    color: var(--prg-txt);
+}
+
+.acc  {
+    color: var(--sts-txt);
+    margin: 25px;
+    font-family: 'Lexand Deco', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.num {
+    font-size: 1.6em;
+    color: var(--lrg-txt);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-transform: none;
+}
+
+@media only screen and (min-width: 766px) {
+    .card {
+        position: absolute;
+        margin: 0;
+        height: 440px;
+        width: 1000px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+        flex-direction: row;
+    }
+
+    #hero-ovrly {
+        border-radius: 0 10px 10px 0;
+        order: 3;
+    }
+
+    .overlay-clr {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .card-body {
+        margin: 55px 75px;
+    }
+
+    .paragraph {
+        order: 2;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 70px;
+    }
+
+    h1 {
+        order: 1;
+        margin: 0 0 30px 0;
+        padding: 0;
+
+    }
+
+    .accolades {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .acc {
+        padding: 0;
+        margin: 0;
+        letter-spacing: 2px;
+    }
+
+    .num {
+        margin: 0 0 7px 0;
+        letter-spacing: 0;
+
+    }
+    
+    .mobile-img {
+        display: none;
+    }
+
+    .desktop-img {
+        display: block;
+        border-radius: 0 10px 10px 0;
+        max-height: 100%;
+        width: fit-content;
+    }
+}
